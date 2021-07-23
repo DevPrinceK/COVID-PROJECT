@@ -6,16 +6,18 @@ async function start() {
     let apiObj = await fetch("https://covid-api.mmediagroup.fr/v1/cases"); // fetches data from APi
     let apijson = await apiObj.json(); // convert Data to JSON format
 
-    // function calls
+    // ||function calls|| //
 
-    document.getElementById('gh-recorded-cases').innerHTML = ghData.All.confirmed;
-
-
+    // Gets info for the gh placeholder
     getGhData(apijson.Ghana);
+
+    // gets info for the world placeholder
+    getWoData(apijson.Global);
+
     //display(apijson.Ghana);
 }
 
-// this is a change------
+// The fetch entry point
 start();
 
 // Getting Info on Ghana
@@ -29,15 +31,17 @@ function getGhData(ghData) {
     ghconfirmed.innerHTML = ghData.All.confirmed; // confirmed Cases
     ghRecovered.innerHTML = ghData.All.recovered; // Recovered Cases
     ghDeath.innerHTML = ghData.All.deaths; // Death Cases
+}
 
-    // debugging
-    //console.log(`Confirmed: ${ghconfirmed}`);
-    //console.log(`Recovered: ${ghRecovered}`);
-    //console.log(`Death: ${ghDeath}`);
+// Getting Info on world
+function getWoData(woData) {
+    // grabbing the placeholders
+    let woConfirmed = document.getElementById("wo-recorded-cases"); // Confirmed Cases
+    let woRecovered = document.getElementById("wo-recovery-cases"); // Recovered Cases 
+    let woDeath = document.getElementById("wo-DEATH-cases"); // Death Cases
 
-    // debugging
-    //console.log(`Confirmed: ${ghData.All.confirmed}`);
-    //console.log(`Recovered: ${ghData.All.recovered}`);
-    //console.log(`Death: ${ghData.All.deaths}`);
-
+    // setting the values of the placeholders to the values from the API
+    woConfirmed.innerHTML = woData.All.confirmed; // confirmed Cases
+    woRecovered.innerHTML = woData.All.recovered; // Recovered Cases
+    woDeath.innerHTML = woData.All.deaths; // Death Cases
 }
