@@ -1,0 +1,180 @@
+//Imports
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+// variables
+$poppins: "Poppins", sans-serif;
+
+// mixins
+@mixin flex($dir) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main-header {
+  height: fit-content;
+  padding: 20px 0;
+
+  p {
+    margin-top: -10px;
+  }
+
+  #header-div {
+    margin: 10px 0;
+  }
+
+  h1:hover {
+    animation: rotate 1s linear infinite;
+  }
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 13px;
+}
+
+// rotator image
+#rotator-image {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 100px;
+
+  animation: rotate 1.5s linear infinite;
+}
+
+h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+h3 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+hr {
+  background-color: black;
+  width: 50%;
+  text-align: center;
+}
+
+.place-holder {
+  height: 350px;
+  margin: 0 10px;
+  @include flex(column);
+  //align-items: center;
+  //justify-content: center;
+  //width: 25%;
+
+  &:hover {
+    transform: scale(1.4, 1.4);
+    transition-delay: 0.15s;
+    transition-duration: 1s;
+  }
+}
+
+.main-content {
+  background-color: #0dcaf0;
+  display: flex;
+  align-content: space-around;
+  flex-direction: row;
+  margin-top: 20px;
+
+  h5 {
+    text-align: center;
+  }
+}
+
+#safety-protocols {
+  margin-top: 50px;
+}
+
+img {
+  max-height: 250px;
+  width: auto;
+
+  &:hover {
+    transform: scale(1.4);
+    transition-delay: 0.15s;
+    transition-duration: 1s;
+  }
+}
+
+#safety-header {
+  @include flex(column);
+  margin-top: 30px;
+
+  hr {
+    background-color: black;
+    width: 30%;
+    height: 3px;
+    text-align: center;
+
+    &:hover {
+      transition-delay: 0.5s;
+      width: 40%;
+    }
+  }
+
+  &:hover {
+    hr {
+      transition-delay: 0.15s;
+      transition-duration: 1s;
+      width: 40%;
+    }
+  }
+}
+
+.protocol1 {
+  @include flex(row-reverse);
+  //align-items: center;
+  justify-content: space-around;
+}
+
+.protocol {
+  @include flex(row);
+  //align-items: center;
+  justify-content: space-around;
+  //margin: 30px 0;
+  //padding: 30px 0;
+}
+
+.protocol,
+.protocol1 {
+  margin: 30px 0;
+  padding: 30px 0;
+  height: 280px;
+  font-family: $poppins;
+  font-weight: bolder;
+  overflow: hidden;
+}
+
+// ROTATES THE HEADER OF THE SITE THROUGH 360DEG
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  height: 200px;
+}

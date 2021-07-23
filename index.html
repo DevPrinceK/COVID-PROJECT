@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--META DATA-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPS CovidHub</title>
+
+    <!--BOOTSTRAP STYLING FILES-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body class="bg-light">
+
+    <!--HEADER OF SITE-->
+    <header id="main-header" class="container-fluid bg-secondary text-center">
+        <div id="header-div">
+            <h1 class="text-white fw-bold">KPS</h1>
+            <P class="lead text-light">COVID HUB</P>
+        </div>
+    </header>
+
+    <!--ROTATOR IMAGE-->
+    <img id="rotator-image" src="images/virus-removebg-preview.png" alt="corona virus image">
+
+
+    <!--MAIN BODY CONTENT-->
+    <div class="container-fluid main-content bg-light" id="main-content">
+        <!--HOLDS THE COVID DATA OF GHANA-->
+        <div id="gh-placeholder" class="container bg-light place-holder shadow">
+            <h5>GH Covid Cases</h5>
+            <hr>
+            <div class="recorded-cases cases-div">
+                <p>RECORDED CASES</p>
+                <P id="gh-recorded-cases"></P>
+            </div>
+
+            <div class="recovery-cases cases-div">
+                <p>RECOVERY CASES</p>
+                <P id="gh-recovery-cases"></P>
+            </div>
+
+
+            <div class="active-cases cases-div">
+                <p>ACTIVE CASES</p>
+                <P id="gh-active-cases"></P>
+            </div>
+
+            <div class="death-cases cases-div">
+                <p>DEATH CASES</p>
+                <P id="gh-DEATH-cases"></P>
+            </div>
+
+        </div>
+
+        <!--HOLDS THE COVID DATA OF OTHER COUNRIES-->
+        <div id="other-placeholder" class="container bg-light place-holder shadow">
+            <h5>Other Country Covid Cases</h5>
+            <hr>
+            <!--TO STORE INDIVIDUAL CASES - OTHER COUNTRIES-->
+            <div class="recorded-cases cases-div">
+                <p>RECORDED CASES</p>
+                <P id="ot-recorded-cases"></P>
+            </div>
+
+            <div class="recovery-cases cases-div">
+                <p>RECOVERY CASES</p>
+                <P id="ot-recovery-cases"></P>
+            </div>
+
+
+            <div class="active-cases cases-div">
+                <p>ACTIVE CASES</p>
+                <P id="ot-active-cases"></P>
+            </div>
+
+            <div class="death-cases cases-div">
+                <p>DEATH CASES</p>
+                <P id="ot-death-cases"></P>
+            </div>
+
+
+
+        </div>
+
+
+        <!--HOLDS THE COVID DATA OF AFRICA-->
+        <div id="africa-placeholder" class="container bg-light place-holder shadow">
+            <h5>Africa Covid Cases</h5>
+            <hr>
+            <div class="recorded-cases cases-div">
+                <p>RECORDED CASES</p>
+                <P id="af-recorded-cases"></P>
+            </div>
+
+            <div class="recovery-cases cases-div">
+                <p>RECOVERY CASES</p>
+                <P id="af-recovery-cases"></P>
+            </div>
+
+
+            <div class="active-cases cases-div">
+                <p>ACTIVE CASES</p>
+                <P id="af-active-cases"></P>
+            </div>
+
+            <div class="death-cases cases-div">
+                <p>DEATH CASES</p>
+                <P id="af-death-cases"></P>
+            </div>
+
+
+        </div>
+
+
+
+        <!--HOLDS THE COVID DATA OF THE WORLD-->
+        <div id="world-placeholder" class="container bg-light place-holder shadow">
+            <h5>World Covid Cases</h5>
+            <hr>
+            <div class="recorded-cases cases-div">
+                <p>RECORDED CASES</p>
+                <P id="wo-recorded-cases"></P>
+            </div>
+
+            <div class="recovery-cases cases-div">
+                <p>RECOVERY CASES</p>
+                <P id="wo-recovery-cases"></P>
+            </div>
+
+
+            <div class="active-cases cases-div">
+                <p>ACTIVE CASES</p>
+                <P id="wo-active-cases"></P>
+            </div>
+
+            <div class="death-cases cases-div">
+                <p>DEATH CASES</p>
+                <P id="wo-death-cases"></P>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="safety-header">
+        <h3>PROTECT YOURSELF FROM COVID BY DOING THESE</h3>
+        <hr>
+    </div>
+
+    <div class="safety-protocols container-fluid bg-white">
+        <div class="protocol1 bg-white">
+            <div class="protocol-text">MASK UP! <br>ALWAYS PUT ON YOUR FACE MASK </div>
+            <div class="protocol-img">
+                <img src="images/mask-removebg-preview.png" alt="mask up icon">
+            </div>
+        </div>
+
+        <div class="protocol bg-light">
+            <div class="protocol-text">STAY SANITIZED! <br>ALWAYS SANITIZE YOUR HANDS </div>
+            <div class="protocol-img">
+                <img src="images/sanitize-removebg-preview.png" alt="sanitize icon">
+            </div>
+        </div>
+
+        <div class="protocol1 bg-white">
+            <div class="protocol-text">WASH! <br>WASH YOUR HANDS REGULARLY UNDER RUNNING WATER</div>
+            <div class="protocol-img">
+                <img src="images/wash-removebg-preview.png" alt="wash your hands icon">
+            </div>
+        </div>
+
+        <div class="protocol bg-light">
+            <div class="protocol-text">SOCIAL DISTANCING! <br>AVOID CROWDED PLACES ALWAYS IF POSSIBLE </div>
+            <div class="protocol-img">
+                <img src="images/distance-removebg-preview.png" alt="social distancing icon">
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="container-fluid bg-dark text-white">
+        <div class="container">
+            Try Our Other Services
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
