@@ -249,6 +249,15 @@ footer a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: fit-content;
+  }
+  footer #main-footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
   }
   footer a {
     text-decoration: none;

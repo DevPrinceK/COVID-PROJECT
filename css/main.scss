@@ -257,6 +257,12 @@ footer {
 
   footer {
     @include flex(column);
+    height: fit-content;
+    #main-footer-container {
+      @include flex(column);
+      justify-content: center;
+      margin: 30px 0;
+    }
     a {
       text-decoration: none;
     }
