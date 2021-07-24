@@ -86,6 +86,14 @@ hr {
   }
 }
 
+.select-div {
+  @include flex(column);
+  width: 90%;
+  #select-div {
+    width: 100%;
+  }
+}
+
 .cases-div {
   @include flex(row);
   justify-content: space-between;

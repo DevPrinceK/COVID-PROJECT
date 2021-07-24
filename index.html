@@ -89,6 +89,10 @@
                     <p>DEATH CASES</p>
                     <P id="ot-death-cases"></P>
                 </div>
+
+                <div class="select-div" id="select-div">
+                </div>
+
             </div>
         </div>
 
@@ -310,6 +314,9 @@
 
             // Sums the total cases in Africa || confirmed, recovered, death, active
             sumAfricanCases(afrData);
+
+            // Creates a dropdown with the extracted African Names
+            dropCountryNames(afrData);
         }
 
         // Sums the Cases in African Countries
@@ -328,12 +335,6 @@
 
             // will display AFrica data in HTML
             getAfData(recordedSum, recoveredSum, deathSum, activeSum);
-
-            // // DEBUGGING VALUES
-            // display(recordedSum);
-            // display(recoveredSum);
-            // display(deathSum);
-            // display(activeSum);
         }
 
         // DISPLAY AFRICAN CASES IN HTML
@@ -353,9 +354,16 @@
         }
 
 
-        // Create a dropdown list from the API data
-        function createCountryList(data) {
-            return 0;
+        // MAKES A DROPDOWNLIST
+        function dropCountryNames(countryNames) {
+            document.getElementById('select-div').innerHTML = `
+        <select>
+            <option selected>Choose A Country</option>
+            ${countryNames.map(function(name){
+            return `<option>${name[0]}</option>`
+            }).join("")}
+        </select>
+        `
         }
     </script>
 </body>
