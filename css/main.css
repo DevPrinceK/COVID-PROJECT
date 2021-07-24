@@ -70,6 +70,21 @@ hr {
   transition-duration: 1s;
 }
 
+.cases-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkgreen;
+  margin: 5px 0;
+  width: 90%;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+}
+
 .main-content-sub {
   display: flex;
   flex-direction: row;
@@ -206,6 +221,8 @@ footer a {
   .place-holder {
     width: 50%;
     margin-bottom: 30px;
+    height: 500px;
+    padding: 20px 0;
   }
   .cases-div {
     display: flex;
@@ -226,6 +243,8 @@ footer a {
   .place-holder {
     width: 90%;
     background-color: white !important;
+    height: fit-content;
+    padding: 20px 0;
   }
   .place-holder:hover {
     transform: none;

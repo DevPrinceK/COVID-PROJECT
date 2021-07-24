@@ -86,6 +86,18 @@ hr {
   }
 }
 
+.cases-div {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkgreen;
+  margin: 5px 0;
+  width: 90%;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+}
+
 .main-content-sub {
   @include flex(row);
   width: 50%;
@@ -211,6 +223,8 @@ footer {
   .place-holder {
     width: 50%;
     margin-bottom: 30px;
+    height: 500px;
+    padding: 20px 0;
   }
 
   .cases-div {
@@ -226,9 +240,15 @@ footer {
     @include flex(column);
   }
 
+  // .cases-div {
+  // height: fit-content;
+  // }
+
   .place-holder {
     width: 90%;
     background-color: white !important;
+    height: fit-content;
+    padding: 20px 0;
 
     &:hover {
       transform: none;
