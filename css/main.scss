@@ -80,7 +80,7 @@ hr {
   //width: 25%;
 
   &:hover {
-    transform: scale(1.4, 1.4);
+    transform: scale(1.2, 1.2);
     transition-delay: 0.15s;
     transition-duration: 1s;
   }
@@ -229,6 +229,13 @@ footer {
   .place-holder {
     width: 90%;
     background-color: white !important;
+
+    &:hover {
+      transform: none;
+      //transition-delay: 0.15s;
+      //transition-duration: 1s;
+    }
+
     //margin-bottom: 30px;
   }
 
