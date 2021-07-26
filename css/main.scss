@@ -72,7 +72,7 @@ hr {
 }
 
 .place-holder {
-  height: 350px;
+  height: 470px;
   margin: 0 10px;
   @include flex(column);
   //align-items: center;
@@ -104,6 +104,14 @@ hr {
   padding: 5px 10px;
   border-radius: 15px;
   color: white;
+
+  p {
+    font-size: large;
+  }
+
+  .case-figures {
+    font-size: 20px;
+  }
 }
 
 .main-content-sub {
@@ -115,9 +123,6 @@ hr {
   @include flex(row);
   align-content: space-around;
   background-color: #0dcaf0;
-  //display: flex;
-  //align-content: space-around;
-  //flex-direction: row;
   margin-top: 20px;
 
   h5 {
@@ -181,12 +186,16 @@ img {
 
 .protocol,
 .protocol1 {
-  margin: 30px 0;
+  margin: 50px 0;
   padding: 30px 0;
   height: 280px;
   font-family: $poppins;
   font-weight: bolder;
   overflow: hidden;
+
+  .gif-img {
+    height: 250px;
+  }
 }
 
 // ROTATES THE HEADER OF THE SITE THROUGH 360DEG
@@ -218,7 +227,7 @@ footer {
 }
 
 // MEDIA QUERY 880PX SCREEN WIDTH
-@media screen and (max-width: 881px) {
+@media screen and (max-width: 1080px) {
   .main-content {
     @include flex(column);
     width: 100%;
@@ -231,35 +240,58 @@ footer {
   .place-holder {
     width: 50%;
     margin-bottom: 30px;
-    height: 500px;
+    height: 630px;
     padding: 20px 0;
-  }
 
+    &:hover {
+      transform: none;
+    }
+  }
+  .protocol,
+  .protocol1 {
+    .protocol-text {
+      margin-bottom: 50px;
+    }
+  }
   .cases-div {
     @include flex(column);
     justify-content: left;
     //text-align: left;
+
+    p {
+      font-size: 23px;
+    }
+
+    .case-figures {
+      font-size: 23px;
+    }
+  }
+
+  #wash-img {
+    width: 400px;
+    margin-right: 10px;
   }
 }
 
 // MEDIA QUERY 650PX SCREEN WIDTH
 @media screen and (max-width: 651px) {
+  p {
+    font-size: 25px;
+  }
+
   .main-content-sub {
     @include flex(column);
   }
 
-  // .cases-div {
-  // height: fit-content;
-  // }
-
   .place-holder {
-    width: 90%;
+    width: 100%;
     background-color: white !important;
     height: fit-content;
     padding: 20px 0;
 
     &:hover {
       transform: none;
+      //transform: scale(1);
       //transition-delay: 0.15s;
       //transition-duration: 1s;
     }
@@ -270,6 +302,10 @@ footer {
   h1 {
     text-align: center;
     //letter-spacing: 25px;
+  }
+
+  .case-figures {
+    font-size: 25px;
   }
 
   #rotator-image {

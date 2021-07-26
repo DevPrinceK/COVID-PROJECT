@@ -56,7 +56,7 @@ hr {
 }
 
 .place-holder {
-  height: 350px;
+  height: 470px;
   margin: 0 10px;
   display: flex;
   flex-direction: column;
@@ -95,6 +95,14 @@ hr {
   padding: 5px 10px;
   border-radius: 15px;
   color: white;
+}
+
+.cases-div p {
+  font-size: large;
+}
+
+.cases-div .case-figures {
+  font-size: 20px;
 }
 
 .main-content-sub {
@@ -178,12 +186,17 @@ img:hover {
 
 .protocol,
 .protocol1 {
-  margin: 30px 0;
+  margin: 50px 0;
   padding: 30px 0;
   height: 280px;
   font-family: "Poppins", sans-serif;
   font-weight: bolder;
   overflow: hidden;
+}
+
+.protocol .gif-img,
+.protocol1 .gif-img {
+  height: 250px;
 }
 
 @keyframes rotate {
@@ -219,7 +232,7 @@ footer a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 881px) {
+@media screen and (max-width: 1080px) {
   .main-content {
     display: flex;
     flex-direction: column;
@@ -233,8 +246,15 @@ footer a {
   .place-holder {
     width: 50%;
     margin-bottom: 30px;
-    height: 500px;
+    height: 630px;
     padding: 20px 0;
+  }
+  .place-holder:hover {
+    transform: none;
+  }
+  .protocol .protocol-text,
+  .protocol1 .protocol-text {
+    margin-bottom: 50px;
   }
   .cases-div {
     display: flex;
@@ -243,9 +263,22 @@ footer a {
     align-items: center;
     justify-content: left;
   }
+  .cases-div p {
+    font-size: 23px;
+  }
+  .cases-div .case-figures {
+    font-size: 23px;
+  }
+  #wash-img {
+    width: 400px;
+    margin-right: 10px;
+  }
 }
 
 @media screen and (max-width: 651px) {
+  p {
+    font-size: 25px;
+  }
   .main-content-sub {
     display: flex;
     flex-direction: column;
@@ -253,7 +286,7 @@ footer a {
     align-items: center;
   }
   .place-holder {
-    width: 90%;
+    width: 100%;
     background-color: white !important;
     height: fit-content;
     padding: 20px 0;
@@ -263,6 +296,9 @@ footer a {
   }
   h1 {
     text-align: center;
+  }
+  .case-figures {
+    font-size: 25px;
   }
   #rotator-image {
     top: 40px;
