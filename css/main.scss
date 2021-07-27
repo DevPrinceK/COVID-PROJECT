@@ -35,6 +35,17 @@ $poppins: "Poppins", sans-serif;
   h1:hover {
     animation: rotate 1s linear;
   }
+
+  // #company-logo {
+  //   img {
+  //     width: 150px;
+  //     border-radius: 30px;
+  //   }
+  //   &:hover {
+  //     transform: scale(1);
+  //   }
+  //   margin-bottom: 30px;
+  // }
 }
 
 h1 {
@@ -311,6 +322,10 @@ footer {
   #rotator-image {
     top: 40px;
     left: 125px;
+
+    // position: absolute;
+    // top: 40%;
+    // left: 50%;
   }
 
   // #logo-img {
